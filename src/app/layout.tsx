@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '@/style/globals.css'
 import { FBScript } from '@/components/fb/sdk'
-import { PlacesScript } from '@/components/google/places'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +20,6 @@ export default function RootLayout({
     <html lang="nl">
       <body className={inter.className}>
         <FBScript />
-        <PlacesScript />
         <>{children}</>
       </body>
     </html>
