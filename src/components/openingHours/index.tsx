@@ -7,6 +7,7 @@ import { env } from 'process'
 import neveleHours from './data/nevele.json'
 import deinzeHours from './data/deinze.json'
 import React from 'react'
+import { H2, H3 } from '../typography'
 
 interface OpeningHourProps {}
 
@@ -57,7 +58,6 @@ const getOpeningHours = async (): Promise<
   ]
   const promises = placeIds.map(({ id }) => fetchPlaceDetails(id))
   const responses = await Promise.all(promises)
-  console.log(responses)
 
   const nevele = responses.find(data => data.id === placeIds[0].id)!
   const deinze = responses.find(data => data.id === placeIds[1].id)!
@@ -71,19 +71,17 @@ const getOpeningHours = async (): Promise<
 export const OpeningHours = async ({}: OpeningHourProps) => {
   const openingHours = await getOpeningHours()
   return (
-    <section className="flex flex-col items-center justify-center">
+    <section className="flex flex-col items-center justify-center gap-y-5">
       {Object.keys(openingHours).map(place => {
         return (
-          <>
-            <h2 key={place} className="capitalize">
-              {place}
-            </h2>
+          <div key={place}>
+            <H3 className="mb-3 text-center capitalize">{place}</H3>
             <ul>
               {openingHours[place as Place].map(({ open, close }) => {
                 const day = open.weekday
                 const key = `${day}-${open.toFormat('HH:mm')}-${close.toFormat('HH:mm')}`
                 return (
-                  <li key={key} className="">
+                  <li key={key} className="grid grid-cols-2">
                     <span className="capitalize">{open.setLocale('NL-be').weekdayShort}</span>
                     <span>
                       {open.toFormat('HH:mm')} - {close.toFormat('HH:mm')}
@@ -92,7 +90,7 @@ export const OpeningHours = async ({}: OpeningHourProps) => {
                 )
               })}
             </ul>
-          </>
+          </div>
         )
       })}
     </section>
