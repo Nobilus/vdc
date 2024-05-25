@@ -4,7 +4,7 @@ import { z } from 'zod'
 export const env = createEnv({
   server: {},
   client: {
-    NEXT_PUBLIC_FB_PAGE_ID: z.number().min(1),
+    NEXT_PUBLIC_FB_PAGE_ID: z.string().min(1),
     NEXT_PUBLIC_MAP_API_KEY: z.string().min(1),
   },
   runtimeEnv: {
