@@ -1,0 +1,81 @@
+{
+  "id": "ChIJox_acAVsw0cRZxcmJHijT8c",
+  "regularOpeningHours": {
+    "openNow": false,
+    "periods": [
+      {
+        "open": {
+          "day": 1,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 12,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 12,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 12,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 12,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 12,
+          "minute": 0
+        }
+      }
+    ],
+    "weekdayDescriptions": [
+      "maandag: 09:00–12:00",
+      "dinsdag: 09:00–12:00",
+      "woensdag: 09:00–12:00",
+      "donderdag: 09:00–12:00",
+      "vrijdag: 09:00–12:00",
+      "zaterdag: Gesloten",
+      "zondag: Gesloten"
+    ]
+  },
+  "displayName": {
+    "text": "AXA Bank Van de Casteele Deinze",
+    "languageCode": "fr"
+  }
+}
